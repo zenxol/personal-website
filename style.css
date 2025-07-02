@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&family=Sora:wght@600;700&display=swap');
 
 :root {
   --bg1: #f9f9fb;
@@ -15,6 +15,7 @@ html, body {
   padding: 0;
   min-height: 100vh;
   box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
 }
 body {
   display: flex;
@@ -53,11 +54,11 @@ body {
   }
 }
 h1 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 2.5rem;
+  font-family: 'Sora', 'Roboto Mono', monospace;
+  font-size: 2.7rem;
   margin: 0 0 0.5rem 0;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
   background: linear-gradient(90deg, var(--accent), var(--accent2));
   background-clip: text;
   -webkit-background-clip: text;
@@ -65,6 +66,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-block;
+  line-height: 1.1;
 }
 h1::after {
   content: '';
@@ -86,13 +88,19 @@ h1::after {
   margin-bottom: 0.5rem;
   opacity: 0;
   animation: fadeIn 1s 0.7s forwards;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 .about {
-  font-size: 1.1rem;
+  font-size: 1.13rem;
   line-height: 1.7;
   margin-bottom: 0.5rem;
   opacity: 0;
   animation: fadeIn 1s 0.9s forwards;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 @keyframes fadeIn {
   to { opacity: 1; }
@@ -124,9 +132,9 @@ h1::after {
   background: linear-gradient(100deg, #e0e7ff 60%, #f0c6ff 100%);
 }
 .project-title {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-family: 'Sora', 'Roboto Mono', monospace;
+  font-size: 1.18rem;
+  font-weight: 600;
   color: var(--accent);
   margin: 0 0 0.2rem 0;
   text-decoration: none;
@@ -136,14 +144,17 @@ h1::after {
   color: transparent;
   -webkit-text-fill-color: transparent;
   transition: background 0.3s;
+  letter-spacing: -0.5px;
 }
 .project-card:hover .project-title {
   background: linear-gradient(90deg, var(--accent2), var(--accent));
 }
 .project-desc {
-  font-size: 1rem;
+  font-size: 1.04rem;
   color: #44445a;
   margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 400;
 }
 .links {
   display: flex;
@@ -159,6 +170,7 @@ h1::after {
   font-weight: 600;
   font-size: 1.1rem;
   transition: color 0.2s;
+  font-family: 'Inter', Arial, sans-serif;
 }
 .social-link:hover {
   color: #1a5fd6;

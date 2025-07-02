@@ -17,7 +17,7 @@ const projects = [
   },
   {
     title: 'Highway Havoc',
-    link: 'https://github.com/zenxol/highway-havoc',
+    link: 'https://github.com/zenxol/15-112-Term-Project',
     desc: 'A fast-paced game where players navigate traffic and obstacles, testing reflexes and strategy in a dynamic environment.'
   },
   {
