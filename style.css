@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg1: #f9f9fb;
+  --bg2: #e0e7ff;
+  --bg3: #f0c6ff;
+  --text: #22223b;
+  --accent: #4f8cff;
+  --accent2: #ff6ec4;
+  --card: #fff;
+  --shadow: 0 2px 16px rgba(34,34,59,0.07);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0 1rem;
+  background: linear-gradient(120deg, var(--bg1), var(--bg2) 60%, var(--bg3));
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease-in-out infinite alternate;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 3rem 0 2rem 0;
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.2s cubic-bezier(.23,1.01,.32,1) 0.2s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+h1::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 60%;
+  margin: 0.3rem auto 0 auto;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  animation: underlineGrow 1.2s cubic-bezier(.23,1.01,.32,1) 0.5s forwards;
+  transform: scaleX(0);
+}
+@keyframes underlineGrow {
+  to { transform: scaleX(1); }
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #6c6c80;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s 0.7s forwards;
+}
+.about {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s 0.9s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.project-card {
+  background: linear-gradient(100deg, #f4f6fa 80%, #e0e7ff 100%);
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 1px 6px rgba(34,34,59,0.04);
+  transition: box-shadow 0.2s, transform 0.2s, background 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) forwards;
+  animation-delay: 1.1s;
+}
+.project-card:hover {
+  box-shadow: 0 8px 32px rgba(79,140,255,0.18);
+  transform: scale(1.035) translateY(-2px);
+  background: linear-gradient(100deg, #e0e7ff 60%, #f0c6ff 100%);
+}
+.project-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.2rem 0;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s;
+}
+.project-card:hover .project-title {
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+}
+.project-desc {
+  font-size: 1rem;
+  color: #44445a;
+  margin: 0;
+}
+.links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.social-link:hover {
+  color: #1a5fd6;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem 0.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+} 
